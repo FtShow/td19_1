@@ -38,8 +38,7 @@ export const Login = () => {
           console.log(res);
         })
         .catch((res: BaseResponse) => {
-          debugger
-          console.log(res)
+
           res.fieldsErrors.forEach(el=>{
             formikHelpers.setFieldError(el.field, el.error)
           });

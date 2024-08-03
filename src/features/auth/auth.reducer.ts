@@ -88,4 +88,4 @@ export const initializeApp = createAppAsyncThunk<{ isLoggedIn: boolean }, void>(
 
 export const authReducer = slice.reducer;
 export const authActions = slice.actions;
-export const authThunks = { logout, initializeApp };
+export const authThunks = { logout, initializeApp, login };

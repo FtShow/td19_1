@@ -2,6 +2,11 @@ import { Dispatch } from "redux";
 import axios, { AxiosError } from "axios";
 import { appActions } from "app/app.reducer";
 
+/**
+ *
+ * @param {unknown} e - Ошибка, возникшая при выполнении запроса к серверу.
+ * @param {Dispatch} dispatch - Функция для отправки действий в Redux store.
+ */
 export const handleServerNetworkError = (e: unknown, dispatch: Dispatch) => {
   const err = e as Error | AxiosError<{ error: string }>;
   if (axios.isAxiosError(err)) {

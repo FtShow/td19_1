@@ -4,9 +4,10 @@ import { BaseResponse } from "common/types/common.types";
 
 /**
  *
- * @param data
- * @param dispatch
- * @param isShowGlobalError
+ * * @template D Тип данных, содержащихся в ответе от сервера.
+ *  * @param {BaseResponse<D>} data - Ответ от сервера, содержащий возможные сообщения об ошибках.
+ *  * @param {Dispatch} dispatch - Функция для отправки действий в Redux store.
+ *  * @param {boolean} [isShowGlobalError=true] - Флаг, указывающий, нужно ли показывать глобальную ошибку.
  */
 export const handleServerAppError = <D>(data: BaseResponse<D>, dispatch: Dispatch, isShowGlobalError: boolean = true) => {
   if(isShowGlobalError){

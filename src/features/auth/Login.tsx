@@ -39,7 +39,7 @@ export const Login = () => {
         })
         .catch((res: BaseResponse) => {
 
-          res.fieldsErrors.forEach(el=>{
+          res.fieldsErrors?.forEach(el=>{
             formikHelpers.setFieldError(el.field, el.error)
           });
         });
